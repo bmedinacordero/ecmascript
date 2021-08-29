@@ -108,17 +108,17 @@ const square = num => num * num;
 // promesas
 
 const helloPromise = () => {
-    return new Promise((result,reject) => {
-        if (true) {
-            resolve("Hey!")
+    return new Promise((resolve,reject) => {
+        if (false) {
+            resolve("Hey!");
             
         }else{
-            reject ("Ups!")
+            reject ("Ups!");
         }
-    })
+    });
 }
 
-helloPromise();
-.then(response => console.log(response));
-.then(() => console.log("hola"));
+helloPromise()
+.then(response => console.log(response))
+// .then(() => console.log("hola"))
 .catch(error => console.log(error));

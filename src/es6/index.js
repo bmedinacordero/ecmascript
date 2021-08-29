@@ -21,6 +21,10 @@ console.log(epicPhrase);
 let epicPhrase2 = `${hello} ${world}`;
 console.log(epicPhrase2);
 
+
+
+// LET y CONST, Multilínea, Spread Operator y Desestructuración
+
 let lorem = "Quiero escribir una frase epica que podamos separar muy profesionalmente \n"
 + "Aqui va otra frase epica que necesitamos." 
 
@@ -64,3 +68,57 @@ console.log(globalVar);
 const a = "b";
 a = "a";
 console.log(a);
+
+
+
+// Arrow Functions, Promesas y Parámetros en objetos
+
+let name = "Bryan";
+let age = 25;
+
+// es5
+obj = { name: name, age: age}
+
+// es6
+obj2 = {name,age};
+
+console.log(obj);
+console.log(obj2);
+
+const names = [
+    {name: "Bryan", age: 25},
+    {name: "Katherine", age: 24}
+]
+let listOfNames = names.map(function (item) {
+    console.log(item.name);
+})
+
+let lisOfNames2 = names.map(item => console.log(item.name));
+
+const lisOfNames3 = (name, age, country) => {
+
+}
+
+const listOfNames4 = name =>{
+
+}
+
+const square = num => num * num;
+
+// promesas
+
+const helloPromise = () => {
+    return new Promise((result,reject) => {
+        if (true) {
+            resolve("Hey!")
+            
+        }else{
+            reject ("Ups!")
+        }
+    })
+}
+
+helloPromise();
+.then(response => console.log(response));
+.then(() => console.log("hola"));
+.catch(error => console.log(error));
